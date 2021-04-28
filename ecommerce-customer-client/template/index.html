@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a5b26f850d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Renetuku</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav id="nav-before-login" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/renetuku-nav-logo.png" alt="rt-logo" width="150" class="d-inline-block align-top brand-radius">
+            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-clipboard-list"></i> Register</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <nav id="nav-after-login" class="navbar navbar-expand-lg navbar-light bg-light" v-if="navbar == true">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/renetuku-nav-logo.png" alt="" width="150" class="d-inline-block align-top brand-radius">
+            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-shopping-bag"></i> Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-heart"></i> My Wishlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> My Cart</a>                       
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-history"></i> Transaction History</a>                       
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>                        
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- CARROUSEL -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="https://wallpapercave.com/wp/wp3435706.jpg"></svg>
+    
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-dark" href="#">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="https://cdn.mmos.com/wp-content/uploads/2019/08/final-fantasy-xiv-the-rising-banner.jpg"></svg>
+    
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-dark" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="http://ayay.co.uk/backgrounds/fighting_games/dissidia_final_fantasy/the-protagonists.jpg"></svg>
+    
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                <p><a class="btn btn-lg btn-dark" href="#">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Product Highlight -->
+      <section id="highlight-product">
+        <div class="container">
+
+            <div class="col-lg-12 text-center">
+                <h3> New Arrivals </h3>
+            </div>
+
+              <div class="row">
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://d3ss0gp3e5d7m3.cloudfront.net/assets/images/stitch-fix-mens-clothes@1x.2uo4O.jpg" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://www.gamekyo.com/images_1/98561dae19cc5f36997882f61ca41bea20190730124258.jpg" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://www.gamekyo.com/images_1/39e8e4b0947514bda3e40f5adef5540520200520093641.jpg" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsoNZjHjnpOIkgx-7MPf805bOBjQNebaBylHi0TPyBHGQGgVtAVmxm73iH2VbSzc3l0A&usqp=CAU" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+      </section>
+
+      <!-- CHECKOUT PAGE -->
+      <section id="checkout-page">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8">
+                      <table class="table">
+                          <h3> <i class="fas fa-shopping-cart"></i> My Cart </h3>
+                          <thead>
+                            <tr>
+                              <th scope="col" colspan="2">Product</th>
+                              <th scope="col" class="quantity-th-length">Quantity</th>
+                              <th scope="col">Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <!-- ITEM -->
+                            <tr>
+                              <td class="table-cart-image">
+                                <img class="cart-image" src="https://d3ss0gp3e5d7m3.cloudfront.net/assets/images/stitch-fix-mens-clothes@1x.2uo4O.jpg" alt="test-product">
+                              </td>
+                              <td>Clothes</td>
+                              <td> 
+                                  <div class="row">
+                                      <div class="col-lg-2">
+                                          <input class="form-control qty-input" type="text" value="1">
+                                      </div>
+                                      <div class="col-lg-1">
+                                        <i class="fas fa-plus-circle"></i>
+                                      </div>
+                                      <div class="col-lg-1">
+                                        <i class="fas fa-minus-circle"></i>
+                                      </div>
+                                      <div class="col-lg-1">
+                                        <i class="fas fa-trash-alt"></i>
+                                      </div>
+                                  </div>
+                            </td>
+                              <td>Rp 250.000,00</td>
+                            </tr>
+
+                            <!-- ITEM -->
+                            <tr>
+                                <td class="table-cart-image">
+                                  <img class="cart-image" src="https://www.gamekyo.com/images_1/39e8e4b0947514bda3e40f5adef5540520200520093641.jpg" alt="test-product">
+                                </td>
+                                <td>Clothes</td>
+                                <td> 
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <input class="form-control qty-input" type="text" value="1">
+                                        </div>
+                                        <div class="col-lg-1">
+                                          <i class="fas fa-plus-circle"></i>
+                                        </div>
+                                        <div class="col-lg-1">
+                                          <i class="fas fa-minus-circle"></i>
+                                        </div>
+                                        <div class="col-lg-1">
+                                          <i class="fas fa-trash-alt"></i>
+                                        </div>
+                                    </div>
+                              </td>
+                                <td>Rp 250.000,00</td>
+                              </tr>
+
+                              <!-- ITEM -->
+                              <tr>
+                                <td class="table-cart-image">
+                                  <img class="cart-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsoNZjHjnpOIkgx-7MPf805bOBjQNebaBylHi0TPyBHGQGgVtAVmxm73iH2VbSzc3l0A&usqp=CAU" alt="test-product">
+                                </td>
+                                <td>Clothes</td>
+                                <td> 
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <input class="form-control qty-input" type="text" value="1">
+                                        </div>
+                                        <div class="col-lg-1">
+                                          <i class="fas fa-plus-circle"></i>
+                                        </div>
+                                        <div class="col-lg-1">
+                                          <i class="fas fa-minus-circle"></i>
+                                        </div>
+                                        <div class="col-lg-1">
+                                          <i class="fas fa-trash-alt"></i>
+                                        </div>
+                                    </div>
+                              </td>
+                                <td>Rp 250.000,00</td>
+                              </tr>
+                              <tr>
+                                  <td class="text-center total-cost" colspan="2"> Total Cost </td>
+                                  <td class="text-center total-cost" colspan="2">Rp 750.000,00 </td>
+                              </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                      <div class="col-lg">
+                          <button class="btn btn-dark btn-cart-checkout"> Checkout </button>
+                      </div>
+                      <div class="col-lg">
+                          <button class="btn btn-outline-dark btn-cart-continue"> Continue Shopping </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <section id="highlight-product">
+            <div class="container">
+    
+                <!-- <div class="col-lg-12 text-center">
+                    <h3> New Arrivals </h3>
+                </div> -->
+    
+                  <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card thumb-product">
+                            <img src="https://d3ss0gp3e5d7m3.cloudfront.net/assets/images/stitch-fix-mens-clothes@1x.2uo4O.jpg" alt="content">
+                            <div class="card-body">
+                                <h5 class="card-title"> Clothes </h5>
+                                <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                                <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                                <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                                <div class="d-flex justify-content-around btn-card">
+                                    <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                    <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3">
+                        <div class="card thumb-product">
+                            <img src="https://www.gamekyo.com/images_1/98561dae19cc5f36997882f61ca41bea20190730124258.jpg" alt="content">
+                            <div class="card-body">
+                                <h5 class="card-title"> Clothes </h5>
+                                <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                                <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                                <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                                <div class="d-flex justify-content-around btn-card">
+                                    <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                    <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card thumb-product">
+                            <img src="https://www.gamekyo.com/images_1/39e8e4b0947514bda3e40f5adef5540520200520093641.jpg" alt="content">
+                            <div class="card-body">
+                                <h5 class="card-title"> Clothes </h5>
+                                <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                                <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                                <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                                <div class="d-flex justify-content-around btn-card">
+                                    <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                    <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3">
+                        <div class="card thumb-product">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsoNZjHjnpOIkgx-7MPf805bOBjQNebaBylHi0TPyBHGQGgVtAVmxm73iH2VbSzc3l0A&usqp=CAU" alt="content">
+                            <div class="card-body">
+                                <h5 class="card-title"> Clothes </h5>
+                                <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                                <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                                <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                                <div class="d-flex justify-content-around btn-card">
+                                    <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                    <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+              </div>
+          </section>
+      </section>
+
+      <!-- Login Page -->
+      <section id="login-page">
+        <!-- <div class="container-fluid d-flex justify-content-center"> -->
+            <div class="col-lg d-flex justify-content-center">
+                <div class="container-fluid backlay">
+                   <main class="form-signin">
+                       <div class="col-lg d-flex justify-content-center logo-login">
+                           <img src="../assets/renetuku-logo.png" alt="renetuku" width="200px">
+                       </div>
+                       <div class="col-lg">
+                           <form class="login-form">
+                             <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+                             <label for="inputEmail" class="d-none">Email address</label>
+                             <input type="email" id="email-login" class="form-control top" placeholder="Email address">
+                             <label for="inputPassword" class="d-none">Password</label>
+                             <input type="password" id="password-login" class="form-control bottom" placeholder="Password">
+                             <div class="checkbox mb-3">
+                               <label>
+                                 <input type="checkbox" value="remember-me"> Remember me
+                               </label>
+                             </div>
+                             <button class="w-100 btn btn-lg btn-outline-light" type="submit">Sign in</button>
+                             <p class="p-btn-register"> Don't Have an account? </p>
+                             <button class="w-100 btn btn-lg btn-outline-dark" type="submit">Register</button>
+                             <p class="mt-5 mb-3 text-center">&copy; 2021</p>
+                           </form>
+                       </div>
+                   </main>
+                 </div>
+            </div>
+        <!-- </div> -->
+        </section>
+
+      <!-- Register Page -->
+      <section id="register-page">
+        <!-- <div class="container-fluid d-flex justify-content-center"> -->
+            <div class="col-lg d-flex justify-content-center">
+                <div class="container-fluid backlay">
+                   <main class="form-signin">
+                       <div class="col-lg d-flex justify-content-center logo-login">
+                           <img src="../assets/renetuku-logo.png" alt="renetuku" width="200px">
+                       </div>
+                       <div class="col-lg">
+                           <form class="login-form">
+                             <h1 class="h3 mb-3 fw-normal text-center">Feel free to register</h1>
+                             <label for="inputEmail" class="d-none">Email address</label>
+                             <input type="email" id="email-login" class="form-control top" placeholder="Email address">
+                             <label for="inputPassword" class="d-none">Password</label>
+                             <input type="password" id="password-login" class="form-control middle" placeholder="Password">
+                             <label for="repeat-password-register" class="d-none">Repeat Password</label>
+                             <input v-model="repeatPassword" type="password" id="repeat-password-register" class="form-control bottom" placeholder="Repeat Password" required>
+                             <div class="checkbox mb-3">
+                               <label>
+                                 <input type="checkbox" value="remember-me"> I accept terms & condtions.
+                               </label>
+                             </div>
+                             <button class="w-100 btn btn-lg btn-outline-light" type="submit">Register</button>
+                             <p class="p-btn-register"> Have an account? </p>
+                             <button class="w-100 btn btn-lg btn-outline-dark" type="submit">Back to Login Page</button>
+                             <p class="mt-5 mb-3 text-center">&copy; 2021</p>
+                           </form>
+                       </div>
+                   </main>
+                 </div>
+            </div>
+        <!-- </div> -->
+        </section>
+
+      <!-- WISHLIST PAGE-->
+      <section id="wishlist-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <table class="table">
+                        <h3> <i class="fas fa-heart"></i> My Wishlist </h3>
+                        <thead>
+                          <tr>
+                            <th scope="col" colspan="2">Product</th>
+                            <th scope="col" class="stock-ws-th">Stock Available</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ITEM -->
+                          <tr>
+                            <td class="table-cart-image">
+                              <img class="cart-image" src="https://d3ss0gp3e5d7m3.cloudfront.net/assets/images/stitch-fix-mens-clothes@1x.2uo4O.jpg" alt="test-product">
+                            </td>
+                            <td>Clothes</td>
+                            <td> 
+                                <div class="col-lg">
+                                    <p><strong> 100 </strong></p>
+                                    <button class="btn btn-light"><i class="fas fa-shopping-cart"></i> Add to Cart </button>
+                                    <button class="btn btn-dark"><i class="fas fa-trash-alt"></i> Remove Wishlist </button>
+                                </div>
+                          </td>
+                            <td>Fashion</td>
+                            <td>Rp 250.000,00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT PAGE -->
+      <section id="product-page">
+          <!-- CAROUSEL -->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="https://wallpapercave.com/wp/wp3435706.jpg"></svg>
+    
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-dark" href="#">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="https://cdn.mmos.com/wp-content/uploads/2019/08/final-fantasy-xiv-the-rising-banner.jpg"></svg>
+    
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-dark" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="http://ayay.co.uk/backgrounds/fighting_games/dissidia_final_fantasy/the-protagonists.jpg"></svg>
+    
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                <p><a class="btn btn-lg btn-dark" href="#">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="col-lg-12 text-center">
+        <h3> Best of Best Products </h3>
+    </div>
+    <!-- PRODUCT CARD -->
+
+    <div class="col-lg d-flex justify-content-center">
+        <input type="text"
+              class="form-control search-bar"
+              placeholder="Search products here..."
+              >
+    </div>
+
+    <section id="highlight-product">
+        <div class="container">
+
+              <div class="row">
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://d3ss0gp3e5d7m3.cloudfront.net/assets/images/stitch-fix-mens-clothes@1x.2uo4O.jpg" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://www.gamekyo.com/images_1/98561dae19cc5f36997882f61ca41bea20190730124258.jpg" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://www.gamekyo.com/images_1/39e8e4b0947514bda3e40f5adef5540520200520093641.jpg" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card thumb-product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsoNZjHjnpOIkgx-7MPf805bOBjQNebaBylHi0TPyBHGQGgVtAVmxm73iH2VbSzc3l0A&usqp=CAU" alt="content">
+                        <div class="card-body">
+                            <h5 class="card-title"> Clothes </h5>
+                            <p class="card-text"><i class="fab fa-vuejs"></i> Category Fashion </p>
+                            <p class="card-text"><i class="fas fa-cubes"></i> Stock 100 </p>
+                            <p class="card-text"><i class="fas fa-tag"></i> Price Rp 250.000</p>
+                            <div class="d-flex justify-content-around btn-card">
+                                <p class="btn btn-dark"><i class="fas fa-cart-plus"></i> Add to Cart </p>
+                                <p class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+      </section>
+
+      </section>
+
+
+      <!-- TRANSACTION HISTORY PAGE -->
+      <section id="transaction-history-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <table class="table">
+                        <h3 class="text-center"><i class="fas fa-history"></i>  My History </h3>
+                        <thead>
+                          <tr>
+                            <th scope="col">Transaction-ID</th>
+                            <th scope="col">Purchase Date</th>
+                            <!-- class="stock-ws-th" -->
+                            <th scope="col">Total Item</th>
+                            <th scope="col">Total Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ITEM -->
+                          <tr>
+                            <td>#RNTK-ID202101-1</td>
+                            <td>20 March 2020</td>
+                            <td>5 Pcs</td>
+                            <td>Rp 250.000,00</td>
+                          </tr>
+                          <tr>
+                            <td class="text-center total-cost" colspan="2"> Total Spent </td>
+                            <td class="text-center total-cost" colspan="2">Rp 750.000,00 </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- CHECKOUT CONFIRM -->
+      <section id="checkout-confirm">
+        <div class="container">
+            <main>
+              <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="./assets/renetuku-logo.png" alt="" width="72" height="57">
+                <h2>Checkout form</h2>
+                <p class="lead">Renetuku checkout form, please insert requirement below.</p>
+              </div>
+          
+              <div class="row g-3 justify-content-center">
+                  <!-- FROM CART -->
+                <!-- <div class="col-md-5 col-lg-4 order-md-last">
+                  <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your cart</span>
+                    <span class="badge bg-secondary rounded-pill">3</span>
+                  </h4>
+                  <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                      <div>
+                        <h6 class="my-0">Product name</h6>
+                        <small class="text-muted">Brief description</small>
+                      </div>
+                      <span class="text-muted">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                      <div>
+                        <h6 class="my-0">Second product</h6>
+                        <small class="text-muted">Brief description</small>
+                      </div>
+                      <span class="text-muted">$8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                      <div>
+                        <h6 class="my-0">Third item</h6>
+                        <small class="text-muted">Brief description</small>
+                      </div>
+                      <span class="text-muted">$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                      <div class="text-success">
+                        <h6 class="my-0">Promo code</h6>
+                        <small>EXAMPLECODE</small>
+                      </div>
+                      <span class="text-success">−$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                      <span>Total (USD)</span>
+                      <strong>$20</strong>
+                    </li>
+                  </ul>
+          
+                  <form class="card p-2">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Promo code">
+                      <button type="submit" class="btn btn-secondary">Redeem</button>
+                    </div>
+                  </form>
+                </div> -->
+                <div class="col-md-7 col-lg-8">
+                  <h4 class="mb-3">Billing address</h4>
+                  <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input disabled type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                          Valid first name is required.
+                        </div>
+                      </div>
+          
+                      <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input disabled type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                          Valid last name is required.
+                        </div>
+                      </div>
+          
+                      <!-- <div class="col-12">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text">@</span>
+                          <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <div class="invalid-feedback">
+                            Your username is required.
+                          </div>
+                        </div>
+                      </div> -->
+          
+                      <div class="col-12">
+                        <label for="email" class="form-label">Email <span class="text-muted"> </span></label>
+                        <input disabled type="email" class="form-control" id="email" placeholder="you@example.com">
+                        <div class="invalid-feedback">
+                          Please enter a valid email address for shipping updates.
+                        </div>
+                      </div>
+          
+                      <div class="col-12">
+                        <label disabled for="address" class="form-label">Address</label>
+                        <input disabled type="text" class="form-control" id="address" placeholder="Jl. Indo 1" required>
+                        <div class="invalid-feedback">
+                          Please enter your shipping address.
+                        </div>
+                      </div>
+          
+                      <div class="col-12">
+                        <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                        <input disabled type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                      </div>
+          
+                      <div class="col-md-5">
+                        <label for="country" class="form-label">Country</label>
+                        <select disabled class="form-select" id="country" required>
+                          <option value="">Choose...</option>
+                          <option>Indonesia</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid country.
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <label for="state" class="form-label">State</label>
+                        <select disabled class="form-select" id="state" required>
+                          <option value="">Choose...</option>
+                          <option>Jakarta</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+          
+                      <div class="col-md-3">
+                        <label for="zip" class="form-label">Zip</label>
+                        <input disabled type="text" class="form-control" id="zip" placeholder="14045" required>
+                        <div class="invalid-feedback">
+                          Zip code required.
+                        </div>
+                      </div>
+                    </div>
+          
+                    <hr class="my-4">
+          
+                    <div class="form-check">
+                      <input disabled type="checkbox" class="form-check-input" id="same-address">
+                      <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                    </div>
+          
+                    <div class="form-check">
+                      <input disabled type="checkbox" class="form-check-input" id="save-info">
+                      <label class="form-check-label" for="save-info">Save this information for next time</label>
+                    </div>
+          
+                    <hr class="my-4">
+          
+                    <h4 class="mb-3">Payment</h4>
+          
+                    <div class="my-3">
+                      <div class="form-check">
+                        <input disabled id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label class="form-check-label" for="credit">Credit card</label>
+                      </div>
+                      <div class="form-check">
+                        <input disabled id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="debit">Debit card</label>
+                      </div>
+                      <div disabled class="form-check">
+                        <input disabled id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="paypal">PayPal</label>
+                      </div>
+                    </div>
+          
+                    <div class="row gy-3">
+                      <div class="col-md-6">
+                        <label for="cc-name" class="form-label">Name on card</label>
+                        <input disabled type="text" class="form-control" id="cc-name" placeholder="" required>
+                        <small class="text-muted">Full name as displayed on card</small>
+                        <div class="invalid-feedback">
+                          Name on card is required
+                        </div>
+                      </div>
+          
+                      <div class="col-md-6">
+                        <label for="cc-number" class="form-label">Credit card number</label>
+                        <input disabled type="text" class="form-control" id="cc-number" placeholder="" required>
+                        <div class="invalid-feedback">
+                          Credit card number is required
+                        </div>
+                      </div>
+          
+                      <div class="col-md-3">
+                        <label for="cc-expiration" class="form-label">Expiration</label>
+                        <input disabled type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                        <div class="invalid-feedback">
+                          Expiration date required
+                        </div>
+                      </div>
+          
+                      <div class="col-md-3">
+                        <label for="cc-cvv" class="form-label">CVV</label>
+                        <input disabled type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                        <div class="invalid-feedback">
+                          Security code required
+                        </div>
+                      </div>
+                    </div>
+          
+                    <hr class="my-4">
+          
+                    <button class="w-100 btn btn-outline-dark btn-lg" type="submit">Confirm Payment</button>
+                  </form>
+                </div>
+              </div>
+            </main>
+          
+            <!-- <footer class="my-5 pt-5 text-muted text-center text-small">
+              <p class="mb-1">&copy; 2021 Renetuku</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+              </ul>
+            </footer> -->
+          </div>
+      </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>
